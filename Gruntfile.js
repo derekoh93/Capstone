@@ -1,4 +1,4 @@
-// Generated on 2017-07-20 using generator-angular 0.16.0
+// Generated on 2017-04-29 using generator-angular 0.16.0
 'use strict';
 
 // # Globbing
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
       useminPrepare: 'grunt-usemin',
       ngtemplates: 'grunt-angular-templates',
       cdnify: 'grunt-google-cdn',
-      buildcontrol: 'grunt-build-control',
+      buildcontrol: 'grunt-build-control'
   });
 
   // Configurable paths for the application
@@ -29,23 +29,23 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-    // Project settings
-    yeoman: appConfig,
+        // Project settings
+        yeoman: appConfig,
 
-    buildcontrol: {
-      options: {
-        dir: 'dist',
-        commit: true,
-        push: true,
-        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      pages: {
-        options: {
-          remote: 'git@github.com:derekoh93/Capstone.git',
-          branch: 'gh-pages'
-        }
-      }
-    },
+        buildcontrol: {
+          options: {
+            dir: 'dist',
+            commit: true,
+            push: true,
+            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+          },
+          pages: {
+            options: {
+              remote: 'git@github.com:derekoh93/Capstone.git',
+              branch: 'gh-pages'
+            }
+          }
+        },
 
 
     // Watches files for changes and runs tasks based on the changed files
@@ -269,6 +269,7 @@ module.exports = function (grunt) {
             }]
         }
     },
+
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -465,6 +466,16 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
+
+    // Test settings
+    karma: {
+      unit: {
+        configFile: 'test/karma.conf.js',
+        singleRun: true
+      }
+    }
+  });
+
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
