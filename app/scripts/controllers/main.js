@@ -7,8 +7,8 @@
  * # MainCtrl
  * Controller of the capstoneApp
  */
- var capstoneApp =angular.module('capstoneApp', ['ngMap']);
-   capstoneApp.controller('MainCtrl', function($scope,ngMap) {
+angular.module('capstoneApp')
+  .controller('MainCtrl', function($scope,ngMap) {
    $scope.googleMapsUrl='https://maps.googleapis.com/maps/api/js?key=AIzaSyCDtnE5ga16TGvvIM6i90-3BlucdIl4DMY';
    ngMap.getMap().then(function(map) {
      console.log(map.getCenter());
