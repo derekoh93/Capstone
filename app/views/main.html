@@ -5,32 +5,14 @@
           <div id="title">
           <h1>  CityLife Search</h1>
           </div>
-          <div id="type-selector" class="pac-controls">
-            <input type="radio" name="type" id="changetype-all" checked="checked">
-            <label for="changetype-all">All</label>
-
-            <input type="radio" name="type" id="changetype-establishment">
-            <label for="changetype-establishment">Establishments</label>
-
-            <input type="radio" name="type" id="changetype-address">
-            <label for="changetype-address">Addresses</label>
-
-            <input type="radio" name="type" id="changetype-geocode">
-            <label for="changetype-geocode">Geocodes</label>
-          </div>
         </div>
         <div id="pac-container">
-          <input id="pac-input" type="text"
-              placeholder="Enter a location">
+          <input type="text" id="mapsearch">
+          <p><button class="btn btn-sm btn-primary" ng-click="saveBusiness(currentBusiness)">Search</button></p>
         </div>
       </div>
-  <div map-lazy-load="https://maps.google.com/maps/api/js"
-    map-lazy-load-params="{{googleMapsUrl}}">
-    <ng-map center="47.6062,-122.3321" zoom="10"></ng-map>
-  </div>
-</div>
-<div class="row marketing">
-  <h4>Saved Locations</h4>
-  <p>
-    This section will show all of the saved sections.
+      <div id="map-canvas"></div>
+      <iframe
+        src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAEA5TmjTCedUZ89NTyK3wK0e2umS_i5aM&q=business" allowfullscreen>
+      </iframe>
 </div>
