@@ -6,14 +6,11 @@
           <h1>  CityLife Search</h1>
           </div>
         </div>
-        <div id="pac-container">
-          <input type="text" ng-map-autocomplete ng-model="autocomplete" options="options" details="details" id="mapsearch">
-          <p><button class="btn btn-sm btn-primary" ng-click="saveBusiness(currentBusiness)">Search</button></p>
-        </div>
-      </div>
-      <div id="map-canvas"></div>
-      <div map-lazy-load="https://maps.google.com/maps/api/js"
-        map-lazy-load-params="{{googleMapsUrl}}">
-        <ng-map center="47.6062,-122.3321" zoom="15"></ng-map>
-      </div>
-</div>
+<body ng-controller="MainCtrl">
+  <input places-auto-complete types="['geocode']" on-place-changed="placeMarker()" />
+  <ng-map id="mapa" center="{{center}}" zoom="15" on-click="getpos($event)">
+      <marker position="{{latlng}}" on-dragend="getpos($event)"
+        animation="Animation.BOUNCE" animation="DROP" draggable="true"></marker>
+    </ng-map>
+    {{latlng}}
+</body>
