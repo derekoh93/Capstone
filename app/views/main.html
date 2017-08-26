@@ -11,6 +11,8 @@
   <ng-map id="mapa" center="{{center}}" zoom="15" on-click="getpos($event)">
       <marker position="{{latlng}}" on-dragend="getpos($event)"
         animation="Animation.BOUNCE" animation="DROP" draggable="true"></marker>
+
     </ng-map>
     {{latlng}}
+
 </body>
