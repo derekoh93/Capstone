@@ -109,11 +109,13 @@ body {
   background-color: #fff;
   font-family: Roboto;
   margin-right: 0px;
+
 }
 
 #pac-container {
   padding-bottom: 12px;
   margin-right: 12px;
+
 }
 
 
@@ -254,5 +256,8 @@ body {
 }
 .acive {
   color: black;
+}
+input {
+  width: 100%;
 }
 }

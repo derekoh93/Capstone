@@ -7,8 +7,8 @@
           </div>
         </div>
 <body ng-controller="MainCtrl">
-  <input places-auto-complete types="['geocode']" on-place-changed="placeMarker()" />
-  <ng-map id="mapa" center="{{center}}" zoom="15" on-click="getpos($event)">
+  <input places-auto-complete types="['establishment']" on-place-changed="placeMarker()" />
+  <ng-map id="mapa" center="{{center}}" zoom="16" on-click="getpos($event)">
       <marker position="{{latlng}}" on-dragend="getpos($event)"
         animation="Animation.BOUNCE" animation="DROP" draggable="true"></marker>
 
